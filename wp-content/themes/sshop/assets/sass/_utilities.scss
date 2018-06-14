@@ -1,0 +1,98 @@
+// main: style.scss
+
+.container {
+    @include clearfixAfter();
+}
+
+@for $i from 1 through 12 {
+    .eq-row-col-#{$i} {
+        margin-left: -15px;
+        margin-right: -15px;
+        @include clearfixAfter();
+        .eq-col {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @include for-screen( tablet-min ) {
+            .eq-col {
+                width: percentage( ( 12 /$i ) / 12  );
+                float: left;
+                &:nth-child(#{$i}n+1) {
+                	clear: left;
+                }
+
+            }
+        };
+        @include for-screen( tablet-max ) {
+            .eq-col {
+                width: 50%;
+                float: left;
+                &:nth-child(2n+1) {
+                	clear: left;
+                }
+
+            }
+        };
+
+        @include for-screen( small-phone-max ) {
+            .eq-col {
+                width: 100%;
+                float: none;
+                clear: left;
+
+            }
+        };
+
+    }
+
+    .eq-row-col-no-f-#{$i} {
+        margin-left: -15px;
+        margin-right: -15px;
+        .eq-col {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        @include for-screen( tablet-min ) {
+            .eq-col {
+                width: percentage( ( 12 /$i ) / 12  );
+            }
+        };
+        @include for-screen( tablet-max ) {
+            .eq-col {
+                width: 50%;
+            }
+        };
+
+        @include for-screen( small-phone-max ) {
+            .eq-col {
+                width: 100%;
+            }
+        };
+
+    }
+
+}
+
+.btn {
+    font-weight: bold;
+    &.btn-primary {
+        background: $primary;
+        color: #fff;
+        border-color: $primary;
+        &:hover {
+            background: $primary_hover;
+        }
+    }
+    &.btn-outline-primary {
+        border-color: $primary;
+    }
+    &.theme-primary {
+        &:hover {
+            border-color: $primary;
+        }
+        background: $primary;
+        color: #ffffff;
+        text-transform: uppercase;
+
+    }
+}

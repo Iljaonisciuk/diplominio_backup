@@ -1,0 +1,22 @@
+== Changelog ==
+== 1.1.0 ==
+ * Improve style.
+ * Add blank template.
+
+== 1.0.9 ==
+ * Improve.
+ 
+== 1.0.8 ==
+ * Fix theme review issues.
+ 
+== 1.0.7 ==
+ * Fix theme review issues.
+ 
+== 1.0.6 ==
+ * Fix theme review issues.
+ 
+== 1.0.5 ==
+ * Fix theme review issues.
+ 
+== 1.0.4 ==
+ * Initial.

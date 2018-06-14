@@ -1,0 +1,91 @@
+// main: style.scss
+
+.content-area {
+    margin: 35px 0px;
+    @include for-screen( tablet-max ) {
+        margin: 0px 0px;
+        &.woocommerce-main {
+            margin-top: 35px;
+        }
+    }
+    &.front-page {
+        margin-bottom: 0px;
+    }
+
+    .site-main {
+        padding: 20px;
+        background: #fff;
+
+        @include for-screen( phone-max ) {
+            padding: 30px 15px 20px;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+
+    .boxed-widget, .site-main, .grid-products, .layout-tabs {
+        //border: 1px solid  #e8e8e8;
+        border-radius: 3px;
+        box-shadow: 0 3px 13px rgba(38, 50, 56, 0.05);
+    }
+
+    @include clearfixAfter();
+    &.has-sidebar {
+        @include for-screen( tablet-min ) {
+            .site-main {
+                width: 70%;
+                float: left;
+            }
+            .widget-area {
+                width: 30%;
+                padding-left: 30px;
+                float: right;
+
+            }
+        }
+
+        @include for-screen( tablet-max ) {
+            .widget-area {
+                padding-top: 30px;
+                margin-bottom: 30px;
+            }
+        }
+
+        @include for-screen( phone-max ) {
+            .widget-area {
+                .boxed-widget {
+                    margin-left: -15px;
+                    margin-right: -15px;
+                 }
+            }
+        }
+
+    }
+}
+
+.site-layout-left-sidebar {
+    .content-area.has-sidebar {
+        @include for-screen( tablet-min ) {
+            .site-main {
+                float: right;
+            }
+            .widget-area {
+                padding-right: 30px;
+                padding-left: 0px;
+                float: left;
+
+            }
+        }
+    }
+}
+
+.page-no-margin {
+    .content-area {
+        margin: 0px;
+    }
+}
+
+.boxed-widget {
+    background: #fff;
+    padding: 15px;
+}

@@ -1,0 +1,125 @@
+// main: style.scss
+
+
+/*
+##############################################################
+### OWL CAROUSEL THEME (CSS) FOR THE SLIDE ANYTHING PLUGIN ###
+##############################################################
+*/
+
+/* ### PAGINATION BUTTONS ### */
+.owl-carousel .owl-dots  {
+	position:absolute;
+	width:100%;
+	padding:10px 0px 0px;
+	bottom: 0px;
+	text-align:center;
+	font-size:12px;
+	line-height:12px;
+}
+.owl-carousel .owl-dots div {
+	display: inline-block;
+}
+.owl-carousel .owl-dots span {
+	display:inline-block;
+	border-style:none;
+	background-color:rgba(255,255,255,0.3);
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	margin:0px 3px;
+	transition:all .3s ease-in-out;
+	-webkit-transition:all .3s ease-in-out;
+	-moz-transition:all .3s ease-in-out;
+	-o-transition:all .3s ease-in-out;
+}
+.owl-carousel .owl-dots .active span {
+	background-color: rgba(255,255,255,1);
+}
+.owl-carousel .owl-dots span:hover {
+	background-color:rgba(255,255,255,1);
+}
+.owl-pagination-true {
+	margin-bottom: 0px;
+}
+
+/* ### PREVIOUS AND NEXT ARROW BUTTONS ### */
+.owl-carousel .owl-nav div {
+	display:block;
+}
+.owl-carousel.autohide-arrows .owl-nav div {
+	display:none;
+}
+.owl-carousel.autohide-arrows:hover .owl-nav div{
+	display:block;
+}
+.owl-carousel .owl-nav div {
+	position:absolute;
+	top:50%;
+	padding:2px 0px;
+	display:inline-block;
+	transform: translateY(-50%);
+	line-height: 1;
+	transition:all .3s ease-in-out;
+	-webkit-transition:all .3s ease-in-out ;
+	-moz-transition:all .3s ease-in-out;
+	-o-transition:all .3s ease-in-out ;
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next  {
+    @include rem( font-size, 40px );
+    &:before{
+        padding: 10px 15px;
+        display: block;
+        background: rgba( 0, 0, 0, .4 );
+    }
+}
+.owl-carousel .owl-nav .owl-prev {
+	left:15px;
+    &::before {
+        float: left;
+        @include font-icon( '"\\f104"' );
+    }
+}
+.owl-carousel .owl-nav .owl-next {
+	right:15px;
+	&::before {
+        float: left;
+        @include font-icon( '"\\f105"' );
+    }
+
+}
+
+
+/* Slider */
+.slider-wrapper {
+	position: relative;
+	color: #fff;
+    .white {
+        padding: 0px !important;
+    }
+	@include rem( font-size, 20px );
+	h1, h2, h3, h4 {
+		text-transform: uppercase;
+	}
+	.owl-item {
+		.overlay {
+			background: rgba( 0,0,0, .5 );
+			padding: 15px;
+			display: inline-block;
+			width: auto;
+		}
+	}
+	.owl-carousel {
+		.owl-dots {
+
+			position: absolute;
+			bottom: 15px !important;
+			right: 15px;
+			width: auto;
+
+		}
+	}
+
+
+}
